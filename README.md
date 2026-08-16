@@ -4,16 +4,24 @@
 
 ## 構成
 
-- `index.html` — サイト本体（1ファイル完結。CSS/JSすべて内包、外部依存なし）
+```
+sakamoto-lab-site/
+├── public/
+│   └── index.html      ← サイト本体（1ファイル完結・外部依存なし）
+├── wrangler.jsonc      ← Cloudflare の設定
+├── README.md
+└── .gitignore
+```
+
+編集するのは `public/index.html` だけ。ビルド不要。
 
 ## ローカルで確認する
 
-`index.html` をダブルクリックしてブラウザで開くだけ。ビルド不要。
+`public/index.html` をダブルクリックしてブラウザで開くだけ。
 
-## 公開（Cloudflare Pages / GitHub連携）
+## 公開（Cloudflare Workers 静的アセット / GitHub連携）
 
-このフォルダを GitHub リポジトリにして Cloudflare Pages に接続済み。
-修正後は以下で反映される（約1〜2分でビルド完了）:
+修正後は以下で反映される（1〜2分でビルド完了）:
 
 ```powershell
 cd C:\Users\camvp\Documents\Claude\Projects\sakamoto-lab-site
@@ -24,23 +32,25 @@ git push
 
 反映後はブラウザで `Ctrl + Shift + R`（強制リロード）で確認する。
 
-## Cloudflare Pages の設定値
+## Cloudflare 側の設定値
 
 | 項目 | 値 |
 |---|---|
-| Framework preset | None |
-| Build command | （空欄） |
-| Build output directory | `/` |
+| Project name | `sakamoto-lab-site` |
+| Build command | `exit 0` |
+| Deploy command | `npx wrangler deploy` |
 
-静的HTMLなのでビルドコマンドは不要。
+配信するフォルダは `wrangler.jsonc` の `assets.directory`（`./public`）で指定している。
+ダッシュボードに Build output directory の欄がないのはこのため。
 
-## よく直す箇所（index.html 内の目印）
+## よく直す箇所（public/index.html 内の目印）
 
 | 直したいもの | 探す文字列 |
 |---|---|
 | キャッチコピー | `<h1 class="reveal">` |
 | 実績の数値4つ | `class="stats reveal"` |
 | 各実績カード | `<!-- WORK 01 -->` 〜 `<!-- WORK 04 -->` |
+| デモを見るボタン | `class="demo"` |
 | ご依頼の流れ | `<div class="flow">` |
 | FAQ | `<div class="faq">` |
 | メールアドレス | `camvp509@gmail.com` |
