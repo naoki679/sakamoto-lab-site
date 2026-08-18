@@ -7,13 +7,28 @@
 ```
 sakamoto-lab-site/
 ├── public/
-│   └── index.html      ← サイト本体（1ファイル完結・外部依存なし）
-├── wrangler.jsonc      ← Cloudflare の設定
+│   ├── index.html          ← サイト本体（1ファイル完結・外部依存なし）
+│   └── demo/
+│       └── kabu/
+│           └── index.html  ← 高配当株アプリのデモ版（サンプル10銘柄入り）
+├── wrangler.jsonc          ← Cloudflare の設定
 ├── README.md
 └── .gitignore
 ```
 
-編集するのは `public/index.html` だけ。ビルド不要。
+編集するのは `public/index.html`。ビルド不要。
+
+### 高配当株デモの更新方法
+
+`public/demo/kabu/index.html` は kabu-tool の本体をコピーし、先頭に
+デモ用ブートスクリプト（`<!-- デモモード ブートストラップ -->` のブロック）を
+差し込んだもの。本体を更新したら、同じブロックを新しい本体の
+`<meta name="viewport" ...>` の直後に貼り直す。
+
+ブートスクリプトの役割:
+- localStorage を sessionStorage に差し替え（タブを閉じるとデータが消える）
+- サンプル10銘柄を初期投入
+- 画面下のDEMO帯とリセットボタンを追加
 
 ## ローカルで確認する
 
