@@ -291,6 +291,19 @@
   details[open] summary::after{transform:rotate(45deg)}
   details p{padding:0 24px 22px;color:var(--muted);font-size:14.5px}
 
+  /* ---------- プライバシーポリシー ---------- */
+  .privacy{padding-top:90px;padding-bottom:90px;border-top:1px solid var(--line);background:rgba(255,255,255,.015)}
+  .pv{max-width:760px;margin-top:34px;color:var(--muted);font-size:14px;line-height:1.9}
+  .pv h3{font-size:15px;font-weight:800;color:var(--fg);margin:28px 0 8px;letter-spacing:.01em}
+  .pv h3:first-child{margin-top:0}
+  .pv p{margin-bottom:4px}
+  .pv strong{color:var(--fg)}
+  .pv a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+  .pv ul{list-style:none;margin:10px 0 4px;display:flex;flex-direction:column;gap:6px}
+  .pv ul li{position:relative;padding-left:18px}
+  .pv ul li::before{content:"";position:absolute;left:2px;top:12px;width:5px;height:5px;border-radius:50%;background:var(--accent);opacity:.7}
+  .pv-foot{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+
   /* ---------- フッター ---------- */
   footer{border-top:1px solid var(--line);padding:44px 0;color:var(--dim);font-size:13px}
   .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
@@ -751,13 +764,71 @@
   </div>
 </section>
 
+<!-- ================= PRIVACY ================= -->
+<section id="privacy" class="privacy">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Privacy</span>
+      <h2 class="sec">プライバシーポリシー</h2>
+      <p class="sec-lead">サカモトラボ（以下「当方」）は、お問い合わせや開発のご依頼を通じてお預かりする情報を、
+        次のとおり取り扱います。</p>
+    </div>
+
+    <div class="pv reveal">
+      <h3>1. 取得する情報</h3>
+      <p>お問い合わせフォームから、お名前、屋号・会社名、メールアドレス、電話番号、ご予算の目安、
+        ご希望の時期、ご相談内容をお預かりします。入力は任意であり、必須項目以外は空欄のままで構いません。</p>
+
+      <h3>2. 利用目的</h3>
+      <p>お預かりした情報は、<strong>ご相談への回答、お見積りのご提示、その後のご連絡</strong>にのみ使用します。
+        ご本人の同意なく、営業目的のメール配信や、他の目的への転用は行いません。</p>
+
+      <h3>3. 第三者への提供</h3>
+      <p>法令に基づく場合を除き、お預かりした情報を第三者に提供・販売することはありません。<br>
+        ただし、お問い合わせフォームの送信には外部サービス「Formspree」（米国 Formspree, Inc.）を利用しており、
+        送信内容は同社のサーバーを経由し、保管されます。同サービスの取り扱いについては
+        <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Formspreeのプライバシーポリシー</a>
+        をご確認ください。</p>
+
+      <h3>4. 開発でお預かりするデータの取り扱い</h3>
+      <p>アプリ開発をご依頼いただく際、動作確認のために顧客名簿・売上データ・帳票などの実データを
+        お預かりする場合があります。これらについては次のとおり取り扱います。</p>
+      <ul>
+        <li>開発およびサポートの目的以外には一切使用しません</li>
+        <li>第三者に開示・提供しません</li>
+        <li>ご依頼が完了した時点、またはご要望をいただいた時点で速やかに削除します</li>
+        <li>可能な場合は、実データではなくダミーデータでの開発をご提案します</li>
+      </ul>
+
+      <h3>5. 保管期間</h3>
+      <p>お問い合わせ内容は、ご相談が終了した後も、経緯の確認のため一定期間保管する場合があります。
+        削除をご希望の場合は、お申し出いただければ速やかに削除します。</p>
+
+      <h3>6. アクセス解析・Cookieについて</h3>
+      <p>本サイトでは現在、アクセス解析ツールや広告配信のための計測タグ（Cookie等）は使用していません。
+        今後導入する場合は、本ポリシーを改定してお知らせします。</p>
+
+      <h3>7. 開示・訂正・削除のご請求</h3>
+      <p>お預かりしている情報の開示、訂正、利用停止、削除をご希望の場合は、
+        <a href="#contact">お問い合わせフォーム</a>よりご連絡ください。ご本人であることを確認のうえ、
+        速やかに対応します。</p>
+
+      <h3>8. 本ポリシーの改定</h3>
+      <p>法令の変更やサービス内容の見直しに応じて、本ポリシーを改定することがあります。
+        改定した場合は、本ページに最新の内容を掲載します。</p>
+
+      <p class="pv-foot">制定日：2026年8月22日<br>サカモトラボ</p>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="container foot">
     <div>
       <div class="logo" style="font-size:15px"><span class="mark" style="width:28px;height:28px;font-size:14px;border-radius:9px">S</span>
         <span>サカモトラボ<small>SAKAMOTO LAB</small></span></div>
     </div>
-    <div>© 2026 サカモトラボ ｜ <a href="#contact">お問い合わせ</a></div>
+    <div>© 2026 サカモトラボ ｜ <a href="#contact">お問い合わせ</a> ｜ <a href="#privacy">プライバシーポリシー</a></div>
   </div>
 </footer>
 
