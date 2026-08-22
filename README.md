@@ -58,6 +58,26 @@ git push
 配信するフォルダは `wrangler.jsonc` の `assets.directory`（`./public`）で指定している。
 ダッシュボードに Build output directory の欄がないのはこのため。
 
+## お問い合わせフォームの設定（Formspree）
+
+`public/index.html` の末尾のスクリプトにある
+
+```js
+var FORMSPREE_ID = "XXXXXXXX";
+```
+
+を、Formspreeで取得したフォームIDに書き換える。
+
+1. https://formspree.io/ で登録（無料枠：月50件）
+2. New Form を作成し、通知先メールに camvp509@gmail.com を指定
+3. 表示されるエンドポイント `https://formspree.io/f/○○○○○○○○` の
+   **末尾8文字**を `FORMSPREE_ID` に貼る
+4. push して公開 → 一度自分でテスト送信し、届いたメールで認証を完了する
+
+**未設定のあいだ**（`XXXXXXXX` のまま）は、送信ボタンで
+入力内容を本文に入れたメールソフトが立ち上がる動作になる。
+フォームが機能しないまま放置されることはない。
+
 ## よく直す箇所（public/index.html 内の目印）
 
 | 直したいもの | 探す文字列 |
@@ -69,4 +89,6 @@ git push
 | ご依頼の流れ | `<div class="flow">` |
 | FAQ | `<div class="faq">` |
 | メールアドレス | `camvp509@gmail.com` |
+| フォームの項目 | `<form class="cform"` |
+| フォームの送信先 | `FORMSPREE_ID` |
 | 配色 | 先頭の `:root{ }` 内の `--accent` など |
