@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>サカモトラボ ｜ 個人・小さなお店のためのオリジナルアプリ開発</title>
-<meta name="description" content="サカモトラボは、個人・個人事業・小さな会社のための小さなアプリをAIを活用してつくる個人事業です。家族の予定共有、資産管理、商品リスト作成など、暮らしと仕事の「面倒くさい」を解決した開発実績があります。">
-<meta property="og:title" content="サカモトラボ ｜ 個人・小さなお店のためのオリジナルアプリ開発">
-<meta property="og:description" content="ひとりの「面倒くさい」に、ちょうどいいアプリを。個人・個人事業・小さな会社のための、小さなアプリをつくります。">
+<title>サカモトラボ ｜ 小さな会社・お店のホームページ制作</title>
+<meta name="description" content="サカモトラボは、小さな会社・お店のホームページを10ページ一式10万円〜で制作する個人事業です。新規制作、古いサイトのリニューアル、予約や在庫などの仕組みづくりまで、ひとりで一貫して担当します。大阪・茨木市。">
+<meta property="og:title" content="サカモトラボ ｜ 小さな会社・お店のホームページ制作">
+<meta property="og:description" content="小さな会社・お店のホームページを、10ページ一式10万円〜で。ひとりで最後まで担当します。">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230b1020'/><text y='68' x='50' text-anchor='middle' font-size='58' font-family='sans-serif' font-weight='bold' fill='%2338bdf8'>S</text></svg>">
 <style>
@@ -142,6 +142,35 @@
   .card ul{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:7px}
   .card ul li{color:var(--dim);font-size:13.5px;padding-left:18px;position:relative}
   .card ul li::before{content:"";position:absolute;left:2px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--accent);opacity:.75}
+
+  /* ---------- 料金 ---------- */
+  .plan{border:1px solid var(--line-2);border-radius:24px;overflow:hidden;margin-top:46px;
+    background:linear-gradient(160deg,rgba(255,255,255,.055),rgba(255,255,255,.02))}
+  .plan-main{padding:38px 36px 34px;text-align:center;border-bottom:1px solid var(--line);
+    background:radial-gradient(700px circle at 50% 0%,rgba(56,189,248,.14),transparent 62%)}
+  .plan-ttl{font-size:13px;font-weight:800;letter-spacing:.16em;color:var(--accent)}
+  .plan-amt{margin-top:10px;font-weight:900;font-size:clamp(26px,4vw,34px);letter-spacing:-.01em}
+  .plan-amt b{font-size:clamp(52px,9vw,78px);line-height:1;margin-right:4px;
+    background:linear-gradient(100deg,var(--accent),var(--accent-3) 50%,var(--accent-2));
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  .plan-amt small{font-size:15px;color:var(--muted);font-weight:700;margin-left:6px}
+  .plan-sub{margin-top:12px;font-size:14px;color:var(--muted)}
+  .plan-cols{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .plan-cols>div{padding:30px 34px}
+  .plan-cols>div:first-child{border-right:1px solid var(--line)}
+  @media(max-width:720px){
+    .plan-cols{grid-template-columns:1fr}
+    .plan-cols>div:first-child{border-right:0;border-bottom:1px solid var(--line)}
+    .plan-cols>div{padding:26px 24px}
+  }
+  .plan-cols h4{font-size:14px;font-weight:800;margin-bottom:14px;letter-spacing:.02em}
+  .plan-cols ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .plan-cols ul li{position:relative;padding-left:26px;font-size:14px;color:var(--muted);line-height:1.75}
+  .inc li::before{content:"✓";position:absolute;left:2px;top:0;color:#34d399;font-weight:900;font-size:14px}
+  .exc li::before{content:"＋";position:absolute;left:1px;top:0;color:var(--dim);font-weight:900;font-size:13px}
+  .plan-note{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);
+    font-size:12.5px;color:var(--dim);line-height:1.8}
+  .plan-note strong{color:var(--fg)}
 
   /* ---------- 実績 ---------- */
   .works{display:flex;flex-direction:column;gap:26px;margin-top:54px}
@@ -342,9 +371,10 @@
       <span>サカモトラボ<small>SAKAMOTO LAB</small></span>
     </a>
     <nav class="nav-links">
-      <a href="#service">事業内容</a>
-      <a href="#works">開発実績</a>
-      <a href="#flow">ご依頼の流れ</a>
+      <a href="#service">できること</a>
+      <a href="#price">料金</a>
+      <a href="#flow">進め方</a>
+      <a href="#works">制作事例</a>
       <a href="#faq">よくある質問</a>
     </nav>
     <a href="#contact" class="btn btn-primary btn-sm">お問い合わせ</a>
@@ -354,25 +384,25 @@
 <!-- ================= HERO ================= -->
 <section class="hero" id="top">
   <div class="container">
-    <div class="badge reveal"><span class="dot"></span>個人事業「サカモトラボ」— 新規のご相談を受付中</div>
+    <div class="badge reveal"><span class="dot"></span>大阪・茨木市の個人事業 — 新規のご相談を受付中</div>
     <h1 class="reveal">
-      その「面倒くさい」に、<br class="br-pc">
-      <span class="grad">ちょうどいいアプリ</span>をつくります。
+      小さな会社の<span class="grad">ホームページ</span>、<br class="br-pc">
+      ひとりで最後までつくります。
     </h1>
     <p class="lead reveal">
-      サカモトラボは、<strong>個人・個人事業・小さな会社</strong>のための小さなアプリを、AIを活用してつくる個人事業です。
-      大きなシステムは扱いません。そのかわり、市販のソフトでは届かない
-      「うちだけの、この作業」にぴったり合う道具をつくります。仕事のことも、暮らしのことも。
+      サカモトラボは、<strong>小さな会社・お店のホームページ</strong>をつくる個人事業です。
+      新しく立ち上げるのも、何年も止まったままのサイトを作り直すのも承ります。
+      <strong>10ページ一式 10万円〜（税別）</strong>。打ち合わせから公開まで、窓口はひとつです。
     </p>
     <div class="hero-cta reveal">
       <a href="#contact" class="btn btn-primary">無料で相談してみる</a>
-      <a href="#works" class="btn btn-ghost">開発実績を見る</a>
+      <a href="#price" class="btn btn-ghost">料金を見る</a>
     </div>
     <div class="stats reveal">
-      <div class="stat"><b class="grad">おひとりから</b><span>個人・個人事業・数名のお店が対象</span></div>
-      <div class="stat"><b class="grad">最短2週間</b><span>試作版をお見せするまで</span></div>
-      <div class="stat"><b class="grad">小さく作る</b><span>本当に使う機能だけに絞る</span></div>
-      <div class="stat"><b class="grad">暮らしも</b><span>家計・家族の予定などのご相談も</span></div>
+      <div class="stat"><b class="grad">10万円〜</b><span>10ページ一式・税別</span></div>
+      <div class="stat"><b class="grad">窓口はひとり</b><span>打ち合わせから公開まで同じ人が担当</span></div>
+      <div class="stat"><b class="grad">スマホ対応</b><span>すべてのページが標準で対応</span></div>
+      <div class="stat"><b class="grad">名義はお客様</b><span>ドメインもサーバーもお客様のもの</span></div>
     </div>
   </div>
 </section>
@@ -383,43 +413,88 @@
     <div class="reveal">
       <span class="eyebrow">Service</span>
       <h2 class="sec">できること</h2>
-      <p class="sec-lead">「Excelと手作業でなんとかしている」「アプリを探したけれど、どれも自分には大げさすぎる」。
-        そんな小さな困りごとに、ちょうどいい大きさの道具をゼロからつくります。
-        おひとりでのご利用でも、数名のお店でも、規模は問いません。</p>
+      <p class="sec-lead">「ホームページがない」「何年も前に作ったまま止まっている」「スマホで見ると崩れる」。
+        小さな会社・お店のサイトを、新規でもリニューアルでもお引き受けします。
+        専門用語は使いません。いまの困りごとを、そのままの言葉で聞かせてください。</p>
     </div>
 
     <div class="cards">
       <div class="card reveal">
         <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8M12 18v2M7 9h5M7 13h8"/></svg></div>
-        <h3>小さなお店・個人事業の道具</h3>
-        <p>いまのやり方に合わせた専用アプリをつくります。ブラウザで開くだけの1ファイル構成から、スマホでも使えるWebアプリまで、必要な大きさに合わせてご提案します。</p>
+        <h3>ホームページを新しくつくる</h3>
+        <p>サイトをお持ちでない会社・お店向けの新規制作です。会社案内、事業内容、施工事例、お問い合わせフォームまで、10ページ一式でお作りします。原稿や写真がなくても、お話を聞きながらこちらで形にします。</p>
         <ul>
-          <li>お客様の管理・提案履歴の記録</li>
-          <li>商品リスト・チラシ・POPの自動作成</li>
-          <li>売上や在庫の集計・見える化</li>
+          <li>会社案内・事業内容・料金・よくある質問</li>
+          <li>施工事例・商品紹介のページ</li>
+          <li>お問い合わせフォーム（メールで届きます）</li>
         </ul>
       </div>
 
       <div class="card reveal">
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.4"/></svg></div>
-        <h3>AIで「手で写す」をなくす</h3>
-        <p>これまで目で見て手で打ち込んでいた作業を、AIに任せます。紙やスマホの写真からそのまま読み取れるので、「毎回おなじことを入力している」作業ほど効果が出ます。</p>
+        <h3>古いサイトを作り直す</h3>
+        <p>何年も更新が止まっている、スマホで見ると文字が小さい、無料サービスの広告が出ている。そうしたサイトを、いまの見え方に作り直します。これまでの内容は引き継ぐので、一から考え直す必要はありません。</p>
         <ul>
-          <li>紙・PDF・写真からのデータ読み取り</li>
-          <li>SNS投稿文や案内文の下書き作成</li>
-          <li>Web・SNSからの情報の自動収集</li>
+          <li>スマホ・タブレットでの見え方を整える</li>
+          <li>無料サービスから自社ドメインへの移行</li>
+          <li>古い情報の整理と、載せる内容の見直し</li>
         </ul>
       </div>
 
       <div class="card reveal">
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 7h7l2 2h7v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7z"/><path d="M8 13h8M12 10v6"/></svg></div>
-        <h3>暮らしまわりのアプリ</h3>
-        <p>仕事だけでなく、家庭の「面倒くさい」も対象です。市販のアプリだと機能が多すぎて続かない、という声にこそ、自分専用の小さなアプリが効きます。</p>
+        <h3>サイトに「仕組み」を足す</h3>
+        <p>普通のホームページ制作では断られがちな部分です。もともとアプリをつくっている人間なので、ただ見せるだけでなく、業務が楽になる仕組みまで一緒に作れます。</p>
         <ul>
-          <li>家族の予定・持ち物・買い物の共有</li>
-          <li>家計・教育費・老後資金のシミュレーション</li>
-          <li>資産や記録の見える化・自動集計</li>
+          <li>商品一覧・在庫表示・かんたんなネット販売</li>
+          <li>自分で更新できる管理画面</li>
+          <li>Instagramの投稿をサイトに自動で表示</li>
         </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICE ================= -->
+<section id="price">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Price</span>
+      <h2 class="sec">料金</h2>
+      <p class="sec-lead">見積りを取るまで金額が分からない、という状態をなくしたいので、基準を先に出しています。
+        内容によって増減しますが、ここから大きく外れることはありません。</p>
+    </div>
+
+    <div class="plan reveal">
+      <div class="plan-main">
+        <div class="plan-ttl">ホームページ 一式</div>
+        <div class="plan-amt"><b>10</b>万円<small>〜（税別）</small></div>
+        <div class="plan-sub">10ページ分の制作・スマホ対応・お問い合わせフォームまで含みます</div>
+      </div>
+      <div class="plan-cols">
+        <div>
+          <h4>料金に含まれるもの</h4>
+          <ul class="inc">
+            <li>10ページ分の制作（構成・デザイン・文章の整理）</li>
+            <li>スマホ・タブレットでの表示対応</li>
+            <li>お問い合わせフォームの設置</li>
+            <li>お持ちの写真・ロゴの調整と配置</li>
+            <li>公開までの設定作業</li>
+            <li>公開後1か月の手直し</li>
+          </ul>
+        </div>
+        <div>
+          <h4>別途かかるもの</h4>
+          <ul class="exc">
+            <li>ドメイン代（年1,500円前後）</li>
+            <li>サーバー代（月1,000円前後）</li>
+            <li>11ページ目以降の追加</li>
+            <li>ネット販売・予約などの仕組み</li>
+            <li>写真の撮影を依頼される場合</li>
+          </ul>
+          <p class="plan-note">ドメインとサーバーは<strong>お客様の名義・お客様のお支払い</strong>で契約していただき、
+            こちらは管理者として作業します。制作を他社に変えても、サイトはお客様の手元に残ります。</p>
+        </div>
       </div>
     </div>
   </div>
@@ -429,24 +504,46 @@
 <div class="band">
   <div class="container">
     <div class="quote reveal">
-      <p class="big">大きなシステムは、つくりません。<br class="br-pc">
-        <span class="grad">あなたひとりのための道具</span>をつくります。</p>
-      <p class="note">業務システムの営業とサポートの現場で、「機能はあるのに使われないシステム」を数多く見てきました。
-        多機能なものほど、小さな現場では持て余されます。だからサカモトラボは、機能の多さではなく
-        「毎日触っても苦にならないか」だけを基準に設計します。ひとりで開発する分、身の丈に合った大きさで止められます。</p>
+      <p class="big">立派なサイトは、つくりません。<br class="br-pc">
+        <span class="grad">お客さんに伝わるサイト</span>をつくります。</p>
+      <p class="note">小さな会社にとって必要なのは、受賞するようなデザインではなく、
+        「何をしている会社か」「どこに連絡すればいいか」が迷わず分かることだと考えています。
+        仕事柄、小さな会社やお店の現場に立ち会う機会が多く、どこが見られていないのかも、ある程度わかります。
+        盛り込みすぎず、載せるべきことを載せる。それだけを守ります。</p>
     </div>
   </div>
 </div>
+
+<!-- ================= FLOW ================= -->
+<section id="flow">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Flow</span>
+      <h2 class="sec">ご依頼の流れ</h2>
+      <p class="sec-lead">「何から話せばいいか分からない」段階でのご相談を歓迎します。
+        ご相談とお見積りまでは無料です。無理にお引き受けすることはありませんので、
+        金額感を知るためだけのご連絡でも構いません。</p>
+    </div>
+    <div class="flow">
+      <div class="step reveal"><div class="n">1</div><h4>ご相談（無料）</h4><p>フォームからご連絡ください。困っていることを、そのままの言葉で書いていただければ大丈夫です。</p></div>
+      <div class="step reveal"><div class="n">2</div><h4>ヒアリング</h4><p>メールやオンライン通話で、事業の内容や載せたいことをお聞きします。お持ちのパンフレット・名刺・写真があれば送ってください。</p></div>
+      <div class="step reveal"><div class="n">3</div><h4>ご提案・お見積り</h4><p>ページの構成と、費用・期間をご提示します。この時点でのお断りも歓迎です。費用が発生するのは、ご発注いただいてからです。</p></div>
+      <div class="step reveal"><div class="n">4</div><h4>できたサイトをご確認</h4><p>公開前のサイトを実際にスマホとパソコンで見ていただきます。文言や写真の差し替えは、納得いくまで調整します。</p></div>
+      <div class="step reveal"><div class="n">5</div><h4>公開・その後</h4><p>ドメインとサーバーをお客様名義で契約いただき、公開します。公開後1か月は手直し無料。以降の更新もご相談ください。</p></div>
+    </div>
+  </div>
+</section>
 
 <!-- ================= WORKS ================= -->
 <section id="works">
   <div class="container">
     <div class="reveal">
       <span class="eyebrow">Works</span>
-      <h2 class="sec">開発実績</h2>
-      <p class="sec-lead">実際に開発し、日常的に使われているアプリです。
-        いずれも「自分や身近な人が本当に困っていたこと」が出発点で、家庭で使うものから
-        お店で使うものまで幅があります。どれもログイン不要でお試しいただけます。</p>
+      <h2 class="sec">つくったもの</h2>
+      <p class="sec-lead">ホームページ制作のかたわら、業務用・個人用のアプリも開発しています。
+        <strong>見た目を整えるだけでなく、中身の仕組みまで自分でつくれる</strong>——その裏付けとして載せています。
+        「サイトにこんな機能を足せないか」というご相談に応えられるのは、この部分があるからです。
+        どれもログイン不要でお試しいただけます。</p>
     </div>
 
     <div class="works">
@@ -627,26 +724,6 @@
   </div>
 </section>
 
-<!-- ================= FLOW ================= -->
-<section id="flow">
-  <div class="container">
-    <div class="reveal">
-      <span class="eyebrow">Flow</span>
-      <h2 class="sec">ご依頼の流れ</h2>
-      <p class="sec-lead">「何ができるか分からない」段階でのご相談を歓迎します。
-        まずは今のやり方を聞かせてください。相談・お見積りまでは無料で、
-        個人の方からのご依頼も、お店・会社としてのご依頼も同じ流れです。</p>
-    </div>
-    <div class="flow">
-      <div class="step reveal"><div class="n">1</div><h4>ご相談（無料）</h4><p>フォームからご連絡ください。困っていることを、そのままの言葉で書いていただければ大丈夫です。</p></div>
-      <div class="step reveal"><div class="n">2</div><h4>ヒアリング</h4><p>メールやオンライン通話で、実際の作業や紙・Excelを写真で見せていただきます。全国どこからでもご相談いただけます。</p></div>
-      <div class="step reveal"><div class="n">3</div><h4>ご提案・お見積り</h4><p>実現できること・できないこと、費用と期間を明確にご提示します。予算に合わせて機能を削る提案もします。</p></div>
-      <div class="step reveal"><div class="n">4</div><h4>試作版のご確認</h4><p>まず動くものを最短でお出しします。実際に触っていただき、ズレをその場で修正していきます。</p></div>
-      <div class="step reveal"><div class="n">5</div><h4>納品・運用サポート</h4><p>納品後の使い方サポートや、使いながら出てきた改善要望への対応も承ります。</p></div>
-    </div>
-  </div>
-</section>
-
 <!-- ================= ABOUT ================= -->
 <section id="about" class="band">
   <div class="container">
@@ -654,15 +731,20 @@
       <span class="eyebrow">About</span>
       <h2 class="sec">サカモトラボについて</h2>
       <p class="note" style="font-size:15.5px;margin-top:6px">
-        普段は業務システムの営業とサポートを担当しており、日々いろいろなお店のバックヤードを見せていただいています。
-        そこで繰り返し出会うのが「システムは入っているのに、結局その横でExcelと手作業が動いている」という光景でした。<br><br>
-        足りないのは大きなシステムではなく、その人・その店だけのための小さな道具です。
-        AIを使えば、そうした道具を現実的なコストと期間でつくれるようになりました。サカモトラボは、そのためにつくった屋号です。<br><br>
-        つくってきたものは、家族の予定を共有するアプリ、自分の資産を把握するためのツール、
-        お店のチラシを一瞬でつくる仕組みなど、どれも身近な困りごとから始まっています。
-        <strong>ひとりで開発しているので、大企業向けの大規模なシステムはお受けできません。</strong>
-        そのかわり、大きな会社では採算が合わずに断られてしまうような小さな相談こそ、得意分野です。<br><br>
-        技術の話は分からなくて構いません。「この作業が面倒くさい」から始めていただければ、形にする役はこちらが引き受けます。
+        大阪・茨木市を拠点にしている個人事業です。本業でも業務システムに関わる仕事をしていて、
+        小さな会社やお店の現場に触れる機会が多くあります。<br><br>
+        そこで何度も出会うのが、「ホームページ？　何年も前に作ったきりで、もう触れないんです」という言葉でした。
+        作った会社と連絡が取れない。更新を頼むと毎回お金がかかる。そもそも誰に頼めばいいか分からない。
+        そうして止まったままのサイトを、いくつも見てきました。<br><br>
+        サカモトラボは、その状態をほどくための屋号です。窓口はひとり。
+        打ち合わせをする人間と、実際に手を動かす人間が同じなので、伝言の行き違いが起きません。
+        ドメインもサーバーもお客様の名義で契約していただくので、
+        <strong>あとから制作者を変えても、サイトはお客様の手元に残ります。</strong><br><br>
+        もともとはアプリ開発から始めたので、見た目を整えるだけでなく、
+        在庫の表示や自分で更新できる管理画面といった仕組みまで一緒につくれます。
+        <strong>ひとりでやっているので、大規模なサイトや大企業のお仕事はお受けできません。</strong>
+        そのかわり、大きな制作会社では採算が合わずに断られるような小さな相談こそ、引き受けたいと思っています。<br><br>
+        専門用語は使いません。「うちのサイト、古いまま止まっていて」から始めていただければ大丈夫です。
       </p>
     </div>
   </div>
@@ -676,20 +758,22 @@
       <h2 class="sec">よくあるご質問</h2>
     </div>
     <div class="faq">
-      <details class="reveal"><summary>個人でも依頼できますか？</summary>
-        <p>はい、そのための屋号です。むしろ個人・個人事業・数名規模のお店が中心のお客様像です。家庭で使うもの、趣味で使うものでも構いません。「こんな小さいことで頼んでいいのかな」と思う内容ほど、歓迎しています。</p></details>
-      <details class="reveal"><summary>費用はどのくらいかかりますか？</summary>
-        <p>つくるものの大きさによって変わるため、ヒアリングのうえでお見積りをお出しします。1画面で完結する小さなツールと、複数人で使うWebアプリでは大きく異なります。ご予算をお聞きしたうえで、その範囲に収まるように機能を絞る提案もします。ご相談とお見積りまでは無料ですので、まずは金額感を知るためだけのご連絡でも構いません。</p></details>
-      <details class="reveal"><summary>どのくらいの期間で使えるようになりますか？</summary>
-        <p>小規模なツールであれば、最短2週間程度で試作版をお出しできます。まず動くものを見ていただき、そこから調整していく進め方を基本としています。</p></details>
+      <details class="reveal"><summary>載せる原稿も写真もないのですが、頼めますか？</summary>
+        <p>はい。それが普通だと思っています。お話をうかがいながら、こちらで文章の下書きを作ってご確認いただく形が多いです。写真はお持ちのもの（現場の写真、商品の写真、スマホで撮ったものでも構いません）を活かし、足りない部分は素材で補います。「何を載せればいいか分からない」ところから始めて大丈夫です。</p></details>
+      <details class="reveal"><summary>どのくらいの期間でできますか？</summary>
+        <p>10ページ一式で、おおよそ3〜6週間が目安です。原稿や写真がそろっている場合は短く、一から整理する場合は長くなります。お急ぎの事情があれば、先にご相談ください。</p></details>
+      <details class="reveal"><summary>公開したあと、自分で更新できますか？</summary>
+        <p>ご希望に応じて、ご自身で文章や写真を差し替えられる管理画面をお付けできます（別途費用）。「自分では触らないので、必要なときに頼みたい」という場合も対応します。そのほうが結果的に安く済むことも多いので、ご希望をお聞きしてから決めましょう。</p></details>
+      <details class="reveal"><summary>ドメインやサーバーはどうなりますか？</summary>
+        <p><strong>お客様の名義・お客様のお支払いで契約していただきます。</strong>こちらは管理者として作業します。遠回りに見えますが、これが一番大事な点だと考えています。制作者の名義で契約すると、あとで連絡が取れなくなったときにサイトごと失います。実際にそうなっている会社を何件も見てきました。当方に何かあっても、サイトはお客様の手元に残ります。</p></details>
+      <details class="reveal"><summary>無料のサービスで作ったサイトがあります。移せますか？</summary>
+        <p>はい。JimdoやAmebaOwndなどで作られたサイトからの作り直しも承っています。これまでの内容は引き継げますので、一から考え直す必要はありません。独自ドメインに移すことで、広告が消え、検索での見え方も整います。</p></details>
       <details class="reveal"><summary>ITに詳しくないのですが大丈夫でしょうか？</summary>
-        <p>まったく問題ありません。むしろ「詳しくないから今のやり方を続けている」という方こそ、効果が大きく出ます。専門用語を使わずにご説明しますので、普段の作業のとおりに話していただければ大丈夫です。</p></details>
-      <details class="reveal"><summary>大きなシステムの開発もお願いできますか？</summary>
-        <p>申し訳ありませんが、多人数で長期間かかるような大規模開発はお受けしていません。ひとりで開発しているため、責任を持って続けられる範囲に限らせていただいています。基幹システムの入れ替えのようなご相談は、他社をご紹介するか、その周辺の「手作業が残っている部分」だけを切り出してお手伝いする形をご提案します。</p></details>
-      <details class="reveal"><summary>納品後の修正や機能追加もお願いできますか？</summary>
-        <p>はい。使い始めてから見えてくる改善点にこそ価値があると考えています。納品後の調整・機能追加も継続してご相談いただけます。</p></details>
-      <details class="reveal"><summary>社内のデータを扱っても安全ですか？</summary>
-        <p>用途に応じて、データを外部に出さない構成（お手元のPCのブラウザ内だけで完結する形など）もご提案できます。実際に、データを一切サーバーに送らない設計のアプリも開発しています。</p></details>
+        <p>まったく問題ありません。専門用語を使わずにご説明します。普段のお仕事の言葉で話していただければ大丈夫です。分からないまま話が進むことがないよう、その都度かみ砕いてお伝えします。</p></details>
+      <details class="reveal"><summary>大きなサイトもお願いできますか？</summary>
+        <p>申し訳ありませんが、ページ数の多い大規模サイトや、大企業のお仕事はお受けしていません。ひとりでやっているため、責任を持って続けられる範囲に限らせていただいています。そのかわり、小さな会社・お店のご相談は歓迎です。</p></details>
+      <details class="reveal"><summary>サイトだけでなく、業務の仕組みも相談できますか？</summary>
+        <p>はい。もともとアプリ開発から始めているので、在庫表示、かんたんなネット販売、お客様の管理といった仕組みまで一緒につくれます。「つくったもの」に載せているのが、その実物です。サイト制作とあわせてご相談ください。</p></details>
     </div>
   </div>
 </section>
@@ -698,19 +782,19 @@
 <section id="contact">
   <div class="container">
     <div class="cta-box reveal">
-      <h2>その「面倒くさい」、<span class="grad">一度話してみませんか。</span></h2>
-      <p>解決できるかどうか分からない段階のご相談で構いません。
-        個人の方でも、お店・会社としてでも大丈夫です。
-        いまのやり方を教えていただければ、実現できるかどうかと概算をお返しします。</p>
+      <h2>そのホームページ、<span class="grad">一度話してみませんか。</span></h2>
+      <p>「うちのサイト、古いまま止まっていて」から始めていただいて構いません。
+        いまの状況を教えていただければ、できること・できないことと、おおよその費用をお返しします。
+        ご相談とお見積りは無料です。</p>
       <form class="cform" id="cform" novalidate>
         <div class="frow">
           <label class="fld">
             <span>お名前 <i>必須</i></span>
-            <input type="text" name="name" required autocomplete="name" placeholder="坂本 太郎">
+            <input type="text" name="name" required autocomplete="name" placeholder="山田 太郎">
           </label>
           <label class="fld">
             <span>屋号・会社名</span>
-            <input type="text" name="company" autocomplete="organization" placeholder="〇〇商店">
+            <input type="text" name="company" autocomplete="organization" placeholder="〇〇工務店">
           </label>
         </div>
         <div class="frow">
@@ -729,9 +813,9 @@
             <select name="budget">
               <option value="">選択しない（相談して決めたい）</option>
               <option>10万円くらいまで</option>
-              <option>10〜30万円</option>
-              <option>30〜50万円</option>
-              <option>50万円以上</option>
+              <option>10〜20万円</option>
+              <option>20〜30万円</option>
+              <option>30万円以上</option>
               <option>まったく見当がつかない</option>
             </select>
           </label>
@@ -747,8 +831,8 @@
           </label>
         </div>
         <label class="fld">
-          <span>いま困っている業務 <i>必須</i></span>
-          <textarea name="message" rows="5" required placeholder="例）ネット注文が1日30〜40件あり、基幹システムへの手入力に2人がかりで2〜3時間かかっています。自動化できないか相談したいです。"></textarea>
+          <span>いまお困りのこと <i>必須</i></span>
+          <textarea name="message" rows="5" required placeholder="例）10年前に作ったホームページがそのままになっています。スマホで見ると崩れるので、作り直したいと思っています。"></textarea>
         </label>
 
         <!-- スパム対策（人には見えない項目） -->
@@ -790,11 +874,11 @@
         <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Formspreeのプライバシーポリシー</a>
         をご確認ください。</p>
 
-      <h3>4. 開発でお預かりするデータの取り扱い</h3>
-      <p>アプリ開発をご依頼いただく際、動作確認のために顧客名簿・売上データ・帳票などの実データを
+      <h3>4. 制作・開発でお預かりするデータの取り扱い</h3>
+      <p>サイト制作やアプリ開発をご依頼いただく際、会社案内・写真・顧客名簿・売上データ・帳票などを
         お預かりする場合があります。これらについては次のとおり取り扱います。</p>
       <ul>
-        <li>開発およびサポートの目的以外には一切使用しません</li>
+        <li>制作・開発およびサポートの目的以外には一切使用しません</li>
         <li>第三者に開示・提供しません</li>
         <li>ご依頼が完了した時点、またはご要望をいただいた時点で速やかに削除します</li>
         <li>可能な場合は、実データではなくダミーデータでの開発をご提案します</li>
