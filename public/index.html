@@ -206,6 +206,38 @@
     position:relative;background:linear-gradient(150deg,#0d1526,#0a0f1c);
     border-left:1px solid var(--line);display:grid;place-items:center;padding:34px;min-height:280px;
   }
+
+  /* 制作事例の小見出し */
+  .works-group{display:flex;align-items:baseline;gap:14px;margin-top:54px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+  .works-group b{font-size:15px;font-weight:800;color:var(--fg);letter-spacing:.04em}
+  .works-group span{font-size:12.5px;color:var(--dim);letter-spacing:.14em;text-transform:uppercase}
+  .works-group + .works{margin-top:26px}
+  .works + .works-group{margin-top:72px}
+  /* ビフォーアフター */
+  .ba{display:flex;align-items:center;justify-content:center;gap:14px;width:100%}
+  .ba-col{display:flex;flex-direction:column;align-items:center;gap:10px}
+  .ba-lbl{font-size:10.5px;font-weight:800;letter-spacing:.2em;color:var(--dim)}
+  .ba-col.after .ba-lbl{color:var(--accent)}
+  .phone{width:118px;height:220px;border:2px solid #2a3550;border-radius:18px;background:#080d18;padding:12px 7px;position:relative;box-shadow:0 22px 50px -18px rgba(0,0,0,.8)}
+  .phone::before{content:"";position:absolute;top:5px;left:50%;transform:translateX(-50%);width:30px;height:3px;border-radius:2px;background:#2a3550}
+  .scr{width:100%;height:100%;border-radius:8px;overflow:hidden}
+  .scr.old{background:#d8d4c4;padding:5px 4px}
+  .old .o-head{height:12px;background:#4a6a3a;margin-bottom:3px}
+  .old .o-nav{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;margin-bottom:4px}
+  .old .o-nav i{height:4px;background:#7a7a9a;display:block}
+  .old .o-tbl{display:grid;grid-template-columns:28% 1fr;gap:3px}
+  .old .o-side i{display:block;height:3px;background:#8a8a8a;margin-bottom:3px}
+  .old .o-main i{display:block;height:2px;background:#6b6b6b;margin-bottom:3px}
+  .old .o-img{height:22px;background:#a9a28a;margin-bottom:4px}
+  .old .o-foot{margin-top:6px;height:6px;background:#9a9480}
+  .scr.new{background:linear-gradient(180deg,#132036,#0b1322);padding:0}
+  .new .n-hero{height:62px;background:linear-gradient(140deg,rgba(56,189,248,.45),rgba(129,140,248,.25));display:flex;flex-direction:column;justify-content:flex-end;padding:7px}
+  .new .n-hero i{display:block;height:5px;width:80%;background:#e8edf7;border-radius:2px;margin-top:3px}
+  .new .n-hero i+i{width:55%;opacity:.7}
+  .new .n-body{padding:7px}
+  .new .n-card{height:20px;border-radius:5px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);margin-bottom:5px}
+  .new .n-btn{height:14px;border-radius:999px;background:linear-gradient(100deg,var(--accent),var(--accent-2));margin-top:7px}
+  .ba-arrow{color:var(--accent);font-size:18px;font-weight:900}
   @media(max-width:900px){
     .work{grid-template-columns:1fr}
     .work-visual{border-left:0;border-top:1px solid var(--line);min-height:230px;order:-1}
@@ -540,12 +572,67 @@
     <div class="reveal">
       <span class="eyebrow">Works</span>
       <h2 class="sec">つくったもの</h2>
-      <p class="sec-lead">ホームページ制作のかたわら、業務用・個人用のアプリも開発しています。
-        <strong>見た目を整えるだけでなく、中身の仕組みまで自分でつくれる</strong>——その裏付けとして載せています。
-        「サイトにこんな機能を足せないか」というご相談に応えられるのは、この部分があるからです。
+      <p class="sec-lead">ホームページの制作事例と、これまでに開発したアプリをご紹介します。
+        アプリは<strong>見た目を整えるだけでなく、中身の仕組みまで自分でつくれる</strong>——その裏付けとして載せています。
         どれもログイン不要でお試しいただけます。</p>
     </div>
 
+    <div class="works-group reveal"><b>ホームページ制作</b><span>Website</span></div>
+    <div class="works">
+
+      <!-- SITE 01 -->
+      <article class="work reveal">
+        <div class="work-body">
+          <div class="work-no">SITE 01</div>
+          <span class="cat">ホームページ制作 ｜ リニューアル</span>
+          <h3>茨木市の工務店様 ｜ サイトリニューアル</h3>
+          <p>社長がホームページ作成ソフトで自作し、ご自身でサーバーを借りて運営してこられたサイトを、スマホ対応の新しいサイトに作り直しました。
+            これまで積み上げてこられた写真や文章は活かしたまま、元請会社様・協力業者様・応募される方が、それぞれ必要な情報にすぐたどり着ける構成に整理しています。</p>
+          <div class="kv">
+            <div><dt>課題</dt><dd>作成から年月が経ち、デザインも情報も当時のまま。スマホで見られることを前提にしていない作りだった</dd></div>
+            <div><dt>やったこと</dt><dd>既存の内容を引き継いで全面リニューアル。施工事例、安全協議会の資料（送り出し教育資料・作業手順書）、職人募集、お問い合わせフォームを整備し、本店と高槻事務所の案内図も掲載</dd></div>
+            <div><dt>いま</dt><dd>公開・運用中。スマホからも施工事例や安全資料を確認でき、職人募集の窓口も兼ねるサイトに</dd></div>
+          </div>
+          <div class="tags">
+            <span class="tag">スマホ対応</span><span class="tag">https（SSL）</span><span class="tag">お問い合わせフォーム</span>
+            <span class="tag">施工事例</span><span class="tag">安全書類の掲載</span><span class="tag">求人ページ</span>
+          </div>
+          <div class="work-links">
+            <a class="demo" href="https://sumoto-komuten.com/index.php" target="_blank" rel="noopener noreferrer">
+              公開中のサイトを見る
+              <svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="work-visual">
+          <div class="ba" aria-label="リニューアル前と後のスマホ表示のイメージ">
+            <div class="ba-col">
+              <div class="phone"><div class="scr old">
+                <div class="o-head"></div>
+                <div class="o-nav"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="o-tbl">
+                  <div class="o-side"><i></i><i></i><i></i><i></i><i></i></div>
+                  <div class="o-main"><div class="o-img"></div><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                </div>
+                <div class="o-foot"></div>
+              </div></div>
+              <span class="ba-lbl">BEFORE</span>
+            </div>
+            <span class="ba-arrow">→</span>
+            <div class="ba-col after">
+              <div class="phone"><div class="scr new">
+                <div class="n-hero"><i></i><i></i></div>
+                <div class="n-body"><div class="n-card"></div><div class="n-card"></div><div class="n-card"></div><div class="n-btn"></div></div>
+              </div></div>
+              <span class="ba-lbl">AFTER</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="works-group reveal"><b>アプリ開発</b><span>Apps</span></div>
     <div class="works">
 
       <!-- WORK 01 -->
